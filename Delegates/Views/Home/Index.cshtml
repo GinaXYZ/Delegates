@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Delegates";
+}
+
+<DOCTYPE! html>
+    <html>
+	<head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>@ViewData["Index"] - Delegates</title>
+    </head>
+	<body>
+		<style>
+			.button {
+				width: 50px;
+				height: 50px;
+				font-size: 20px;
+				align-items: center;
+				justify-content: center;
+			}
+			.textbox {
+				width: 300px;
+				height: 200px;
+				font-size: 14px;
+			}
+			.input {
+				width: 100px;
+				height: 30px;
+			}
+		</style>
+        <form>
+            <fieldset>
+				<legend>Rechner</legend>
+				<br />
+				<input type="number" placeholder="Eingabe 1" name="X" />
+				<br />
+				<br />
+				<input type="number" name="Y" placeholder="Eingabe 2"/>
+			<button type="submit" name="Add">+</button>
+            <button type="submit" name="Subtract">-</button>
+            <button type="submit" name="Divide">/</button>
+			<button type="submit" name="Multiply">*</button>
+			<button type="submit" name="Result">=</button>
+				<br />
+				<br />
+				<textarea class="textbox" readonly>
+				@ViewData["Result"]
+				</textarea>
+				<button type="reset" name="Clear">C</button>
+				<button type="reset" name="ClearAll">CA</button>
+				<br />
+				<br />
+			</fieldset>
+		</form>
+        </body>
+</html>
