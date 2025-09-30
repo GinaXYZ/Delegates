@@ -29,3 +29,4 @@ C:\Users\FIA\source\repos\Delegates\Delegates\obj\Debug\net8.0\refint\Delegates.
 C:\Users\FIA\source\repos\Delegates\Delegates\obj\Debug\net8.0\Delegates.pdb
 C:\Users\FIA\source\repos\Delegates\Delegates\obj\Debug\net8.0\Delegates.genruntimeconfig.cache
 C:\Users\FIA\source\repos\Delegates\Delegates\obj\Debug\net8.0\ref\Delegates.dll
+C:\Users\FIA\source\repos\Delegates\Delegates\obj\Debug\net8.0\Delegates.sourcelink.json

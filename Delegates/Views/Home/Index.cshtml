@@ -2,7 +2,7 @@
     ViewData["Title"] = "Delegates";
 }
 
-<DOCTYPE! html>
+<!DOCTYPE html>
     <html>
 	<head>
             <meta charset="utf-8" />
@@ -32,14 +32,20 @@
             <fieldset>
 				<legend>Rechner</legend>
 				<br />
+				<div class="input-row">
 				<input type="number" placeholder="Eingabe 1" name="X" />
+				<button type="submit" name="Add">+</button>
+				<button type="submit" name="Subtract">-</button>
+				</div>
 				<br />
 				<br />
-				<input type="number" name="Y" placeholder="Eingabe 2"/>
-			<button type="submit" name="Add">+</button>
-            <button type="submit" name="Subtract">-</button>
-            <button type="submit" name="Divide">/</button>
+				<div class="input-row">
+				<input type="number" name="Y" placeholder="Eingabe 2" />            
+				<button type="submit" name="Divide">/</button>
 			<button type="submit" name="Multiply">*</button>
+			</div>
+			<br />
+			<br />
 			<button type="submit" name="Result">=</button>
 				<br />
 				<br />
@@ -47,6 +53,7 @@
 				@ViewData["Result"]
 				</textarea>
 				<button type="reset" name="Clear">C</button>
+				<br />
 				<button type="reset" name="ClearAll">CA</button>
 				<br />
 				<br />
