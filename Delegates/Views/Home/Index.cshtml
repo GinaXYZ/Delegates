@@ -28,33 +28,31 @@
 				height: 30px;
 			}
 		</style>
-        <form>
+        <form method="post" action="/Home/Calculate">
             <fieldset>
 				<legend>Rechner</legend>
 				<br />
-				<div class="input-row">
-				<input type="number" placeholder="Eingabe 1" name="X" />
-				<button type="submit" name="Add">+</button>
-				<button type="submit" name="Subtract">-</button>
-				</div>
-				<br />
-				<br />
-				<div class="input-row">
-				<input type="number" name="Y" placeholder="Eingabe 2" />            
-				<button type="submit" name="Divide">/</button>
-			<button type="submit" name="Multiply">*</button>
-			</div>
-			<br />
-			<br />
-			<button type="submit" name="Result">=</button>
-				<br />
-				<br />
-				<textarea class="textbox" readonly>
-				@ViewData["Result"]
-				</textarea>
-				<button type="reset" name="Clear">C</button>
-				<br />
-				<button type="reset" name="ClearAll">CA</button>
+            <div class="input-row">
+                <input type="number" placeholder="Eingabe 1" name="x" value="@ViewData["X"]" />
+                <button type="submit" name="operation" value="Add">+</button>
+                <button type="submit" name="operation" value="Subtract">-</button>
+            </div>
+            <br />
+            <br />
+            <div class="input-row">
+                <input type="number" name="y" placeholder="Eingabe 2" value="@ViewData["Y"]" />
+                <button type="submit" name="operation" value="Divide">/</button>
+                <button type="submit" name="operation" value="Multiply">*</button>
+            </div>
+            <br />
+            <br />
+            <button type="submit" name="operation" value="Result">=</button>
+            <br />
+            <br />
+            <textarea class="textbox" readonly>@ViewData["Result"]</textarea>
+            <button type="reset">C</button>
+            <br />
+            <button type="reset">CA</button>
 				<br />
 				<br />
 			</fieldset>
