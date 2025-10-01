@@ -7,12 +7,23 @@ namespace Delegates.Controllers
     delegate double Calculate(double x, double y);
     public class HomeController : Controller
     {
+
+        List<string> namen = new List<string> { "Hans", "Peter", "Klaus", "Franz" };
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
+
+        public HomeController()
+        {
+            List<string> namen = new List<string> { "Hans", "Peter", "Klaus", "Franz" };
+            string result = namen.Find((n) => n == "Herbert");
+            List<string> alleMitB = namen.FindAll((n) => n.StartsWith("B"));
+            namen.ForEach(n => Debug.WriteLine(n));
+
+        }
         public IActionResult Calculate(string operation, string x, string y)
         {
             ViewData["X"] = x;
@@ -26,7 +37,7 @@ namespace Delegates.Controllers
                 Calculate divide = (a, b) => a / b;
 
                 double result = 0;
-                string resultText= string.Empty;
+                string resultText = string.Empty;
 
                 switch (operation)
                 {
@@ -60,6 +71,25 @@ namespace Delegates.Controllers
             }
 
             return View("Index");
+        }
+        double? Add(double? x, double? y)
+        {
+            return x + y;
+        }
+
+        double? Subtract(double? x, double? y)
+        {
+            return x - y;
+        }
+
+        double? Multiply(double? x, double? y)
+        {
+            return x * y;
+        }
+
+        double? Divide(double? x, double? y)
+        {
+            return x / y;
         }
     }
 }
